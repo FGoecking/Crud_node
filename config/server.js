@@ -1,5 +1,6 @@
 const express = require('express');
 const consign = require('consign');
+const dbConnection = require('./dbConnection');
 
 
 const app = express();

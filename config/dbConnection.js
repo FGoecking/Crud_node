@@ -6,7 +6,7 @@ const connMySQL = function(){
         user: 'root',
         password:'',
         database:'crud_livros',
-    });
+    }); 
 }
 
 module.exports = function () {

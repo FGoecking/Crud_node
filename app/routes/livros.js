@@ -1,13 +1,13 @@
 module.exports = function(app){
     
 
-    app.get('/livro', function(req, res){
+    app.get('/livros', function(req, res){
 
         const connection = app.config.dbConnection();
-        const noticiasModel = app.app.models.noticiasModel;
+        const livrosModel = app.app.models.livrosModel;
 
-        noticiasModel.getNoticias(connection, function(error, result){
-            res.render("livros/livros", {livros : result});
+        livrosModel.getLivros(connection, function(error, result){
+            res.render("livros/livros", {livro : result});
         });
   
     });
